@@ -1,0 +1,117 @@
+ :root {
+     --primary: #c41e3a;
+     --accent: #FFD700;
+     --dark: #0a0a0a;
+}
+ body {
+     background-color: var(--dark);
+     color: #fff;
+     font-family: 'Montserrat', sans-serif;
+     scroll-behavior: smooth;
+}
+ .section {
+     padding: 6rem 0;
+     position: relative;
+}
+/* Hero Section */
+ #inicio {
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/hero.jpg') center/cover fixed;
+}
+ .hero-content {
+     text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+ .hero-content h1 {
+     font-family: 'Playfair Display', serif;
+     font-size: 3.5rem;
+     color: var(--accent);
+     margin: 2rem 0;
+}
+/* Cards Destaques */
+ .card-highlight {
+     background: rgba(255,255,255,255);
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+     transition: all 0.3s ease;
+     min-height: 400px;
+}
+ .card-highlight:hover {
+     transform: translateY(-10px);
+     background: rgba(0,0,0,0);
+     color:White;
+}
+ .card-img-top {
+     height: 200px;
+     object-fit: cover;
+     filter: grayscale(0.3);
+     transition: filter 0.3s ease;
+}
+/* Corrige o texto dos cards com imagens no hover */
+.card-highlight:hover .text-dark,
+.card-highlight:hover .card-title,
+.card-highlight:hover .card-text {
+    color: white !important; /* Força a cor branca no hover */
+}
+
+/* Remove o sublinhado do link no hover */
+.card-highlight:hover a {
+    text-decoration: none;
+}
+ .video-container {
+     background: #000;
+    /* Fundo preto para caso o vídeo tenha bordas */
+}
+/* Galeria */
+ .gallery-item {
+     position: relative;
+     overflow: hidden;
+     border-radius: 8px;
+}
+ .gallery-item img {
+     transition: transform 0.3s ease;
+}
+ .gallery-item:hover img {
+     transform: scale(1.05);
+}
+/* Contato */
+ .contact-info {
+     background: rgba(255,255,255,0.05);
+     padding: 2rem;
+     border-radius: 10px;
+     border-left: 4px solid var(--primary);
+}
+ .contact-icon {
+     font-size: 2rem;
+     color: var(--accent);
+     margin-bottom: 1rem;
+}
+/* Botão WhatsApp */
+ .whatsapp-btn {
+     transition: all 0.3s ease;
+     width: 60px;
+     height: 60px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+ .whatsapp-btn:hover {
+     transform: scale(1.1) rotate(10deg);
+}
+ @media (max-width: 768px) {
+     .hero-content h1 {
+         font-size: 2.5rem;
+    }
+     .section {
+         padding: 4rem 0;
+    }
+}
+ .avaliacao{
+     overflow: hidden;
+    /* Oculta o conteúdo que ultrapassa o limite */
+     text-overflow: ellipsis;
+    /* Mostra "..." se o texto ultrapassar o limite */
+     white-space: nowrap;
+}
